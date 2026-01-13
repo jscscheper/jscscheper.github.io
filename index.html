@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamie Scheper</title>
+    <meta name="description" content="Bioinformatics scientist specializing in multi-omics integration, RNA-seq pipelines, and full-stack development.">
+    <meta property="og:title" content="Jamie Scheper">
+    <meta property="og:description" content="Bioinformatics scientist specializing in multi-omics integration and clinical biomarker discovery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jscscheper.github.io">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .project:hover .arrow { transform: translateX(4px); }
+    </style>
+    <script>
+        if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.classList.remove('dark')
+        } else {
+            document.documentElement.classList.add('dark')
+        }
+    </script>
+</head>
+<body class="bg-stone-50 dark:bg-zinc-950 text-stone-600 dark:text-zinc-400 antialiased selection:bg-violet-500/20 selection:text-violet-700 dark:selection:text-violet-200 transition-colors duration-300">
+
+    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+
+        <button onclick="toggleTheme()" class="fixed top-6 right-6 p-3 rounded-full bg-stone-200 dark:bg-zinc-800 text-stone-700 dark:text-zinc-200 hover:bg-violet-100 dark:hover:bg-violet-900/30 hover:text-violet-600 dark:hover:text-violet-400 border border-stone-300 dark:border-zinc-700 shadow-sm transition-all" aria-label="Toggle theme">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+        </button>
+
+        <header class="mb-16">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-violet-500 flex items-center justify-center text-white font-mono font-medium text-sm">
+                        JS
+                    </div>
+                    <div>
+                        <h1 class="text-stone-900 dark:text-zinc-100 font-semibold">Jamie Scheper</h1>
+                        <p class="text-sm text-stone-500 dark:text-zinc-500">Bioinformatics, Groningen</p>
+                    </div>
+                </div>
+                <a href="resume.pdf" download class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-stone-300 dark:border-zinc-700 text-stone-700 dark:text-zinc-300 hover:bg-violet-100 dark:hover:bg-violet-900/30 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Resume
+                </a>
+            </div>
+            <p class="text-lg leading-relaxed text-stone-700 dark:text-zinc-300">
+                I like finding patterns in messy biological data. My recent work involved integrating
+                multi-omics data to uncover a hibernation signature - including <span class="text-violet-600 dark:text-violet-400">Dync1li2</span>,
+                a gene no one had linked to metabolic suppression before. I build tools so researchers can skip the coding.
+            </p>
+            <h2 class="mt-8 font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Contact</h2>
+            <p class="text-sm">
+                <a href="mailto:jscscheper@gmail.com" class="text-stone-600 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">jscscheper@gmail.com</a>
+                <span class="text-stone-400 dark:text-zinc-600 mx-2">—</span>
+                <a href="https://github.com/jscscheper" target="_blank" class="text-stone-600 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">GitHub</a>
+                <span class="text-stone-400 dark:text-zinc-600 mx-2">—</span>
+                <a href="https://linkedin.com/in/jscscheper" target="_blank" class="text-stone-600 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">LinkedIn</a>
+                <span class="sm:hidden text-stone-400 dark:text-zinc-600 mx-2">—</span>
+                <a href="resume.pdf" download class="sm:hidden text-stone-600 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">Resume</a>
+            </p>
+
+            <h2 class="mt-8 font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Currently</h2>
+            <p class="text-sm text-stone-600 dark:text-zinc-400">
+                Reading <span class="italic">Born a Crime</span>
+                <span class="text-stone-400 dark:text-zinc-600 mx-2">—</span>
+                Watching Stranger Things S5
+                <span class="text-stone-400 dark:text-zinc-600 mx-2">—</span>
+                Learning Finnish <span class="text-stone-500 dark:text-zinc-500">(slowly)</span>
+            </p>
+
+            <div class="mt-6 p-5 rounded-lg bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800">
+                <p id="quote-text" class="text-stone-700 dark:text-zinc-300 italic"></p>
+                <div class="flex items-center justify-between mt-3">
+                    <span id="quote-author" class="text-sm text-stone-500 dark:text-zinc-500"></span>
+                    <button onclick="newQuote()" class="text-sm text-violet-600 dark:text-violet-400 hover:underline">Another →</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Education</h2>
+            <div>
+                <p class="text-stone-900 dark:text-zinc-100 font-medium">BSc Bioinformatics</p>
+                <p class="text-sm">Hanze University of Applied Sciences, 2020 – 2025</p>
+                <p class="text-sm text-stone-500 dark:text-zinc-500">Minor: Advanced Data Mining & High-Performance Computing</p>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Research</h2>
+            <div class="space-y-4">
+                <a href="https://github.com/jscscheper/hibernation" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Hibernation Multi-Omics Integration</h3>
+                            <p class="text-sm text-stone-500 dark:text-zinc-500">UMCG, Clinical Pharmacy & Pharmacology, 2024</p>
+                            <p class="text-sm mt-2">Integrated transcriptomics, proteomics, and metabolomics (~15,000 features) using DIABLO to discover a 47-feature hibernation signature. Identified Dync1li2 as a novel regulator of metabolic suppression.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jscscheper/internship-acutelines" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Sepsis Biomarker Discovery</h3>
+                            <p class="text-sm text-stone-500 dark:text-zinc-500">UMCG, AcuteLines Research Group, 2023 – 2024</p>
+                            <p class="text-sm mt-2">Discovered two mitochondrial-driven sepsis endotypes from a 348-patient cohort. Built an 11-gene LASSO model achieving 96% (ER) and 93% (ICU) prediction accuracy.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Projects</h2>
+            <div class="space-y-4">
+                <a href="https://github.com/jscscheper/deapp" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">DEApp</h3>
+                            <p class="text-sm mt-1">Dockerized Flask/React platform for RNA-seq analysis. Run DESeq2, edgeR, and GSEA without writing code.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jscscheper/cdsnake" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">CDSnake</h3>
+                            <p class="text-sm mt-1">Reproducible Snakemake pipeline for 16S amplicon analysis. Automated QC, OTU clustering, and visualization.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jscscheper/pedigree-builder" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Pedigree Tracker</h3>
+                            <p class="text-sm mt-1">Java/Thymeleaf web app for constructing family pedigrees with automated Mendelian disease risk calculations.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jscscheper/neural-network" target="_blank" class="project group block p-4 -mx-4 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-900/50 transition-colors">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-stone-900 dark:text-zinc-100 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Neural Network Library</h3>
+                            <p class="text-sm mt-1">MLPs from scratch in Python. Modular layers, activation functions, backprop. Applied to MNIST.</p>
+                        </div>
+                        <span class="arrow text-stone-400 dark:text-zinc-600 transition-transform mt-1">→</span>
+                    </div>
+                </a>
+            </div>
+            <a href="https://github.com/jscscheper?tab=repositories" target="_blank" class="inline-block mt-6 text-sm text-stone-500 dark:text-zinc-500 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">
+                View all projects →
+            </a>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Publication</h2>
+            <p class="text-sm">
+                <span class="text-stone-900 dark:text-zinc-100">Scheper, J.S.C., et al.</span>
+                "Multi-omics integration identifies intracellular adaptations in hibernating golden hamster livers."
+                <span class="italic">Journal of Comparative Physiology B</span> (Under review, 2025)
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="font-mono text-xs text-stone-500 dark:text-zinc-400 uppercase tracking-wider mb-4">Stack</h2>
+            <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                <div>
+                    <span class="text-stone-500 dark:text-zinc-500">Languages</span>
+                    <p class="text-stone-700 dark:text-zinc-300">Python, R, Java, JavaScript, SQL</p>
+                </div>
+                <div>
+                    <span class="text-stone-500 dark:text-zinc-500">Bioinformatics</span>
+                    <p class="text-stone-700 dark:text-zinc-300">DESeq2, Seurat, DIABLO, STAR, BWA</p>
+                </div>
+                <div>
+                    <span class="text-stone-500 dark:text-zinc-500">Pipelines</span>
+                    <p class="text-stone-700 dark:text-zinc-300">Snakemake, Nextflow, Docker, Singularity</p>
+                </div>
+                <div>
+                    <span class="text-stone-500 dark:text-zinc-500">Web & Cloud</span>
+                    <p class="text-stone-700 dark:text-zinc-300">React, Flask, AWS, CI/CD</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pt-8 border-t border-stone-200 dark:border-zinc-800/50">
+            <p class="text-xs text-stone-400 dark:text-zinc-600">© 2025 Jamie Scheper</p>
+        </footer>
+
+    </main>
+
+    <script>
+        const quotes = [
+            { text: "All models are wrong, but some are useful.", author: "George Box" },
+            { text: "The most exciting phrase in science is not 'Eureka!' but 'That's funny...'", author: "Isaac Asimov" },
+            { text: "What I cannot create, I do not understand.", author: "Richard Feynman" },
+            { text: "Beware of bugs in the above code; I have only proved it correct, not tried it.", author: "Donald Knuth" },
+            { text: "The purpose of computing is insight, not numbers.", author: "Richard Hamming" },
+            { text: "If you torture the data long enough, it will confess to anything.", author: "Ronald Coase" },
+            { text: "In God we trust. All others must bring data.", author: "W. Edwards Deming" },
+            { text: "Science is what we understand well enough to explain to a computer.", author: "Donald Knuth" },
+            { text: "The cell is a machine driven by energy. It can thus be approached by studying matter, or by studying energy.", author: "Albert Szent-Györgyi" },
+            { text: "Progress is made by lazy men looking for easier ways to do things.", author: "Robert Heinlein" }
+        ];
+
+        let lastIndex = -1;
+
+        function newQuote() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * quotes.length);
+            } while (randomIndex === lastIndex && quotes.length > 1);
+            lastIndex = randomIndex;
+            const quote = quotes[randomIndex];
+            document.getElementById('quote-text').textContent = `"${quote.text}"`;
+            document.getElementById('quote-author').textContent = `— ${quote.author}`;
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+            } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+        }
+
+        newQuote();
+    </script>
+
+</body>
+</html>
